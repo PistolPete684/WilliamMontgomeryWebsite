@@ -1,0 +1,525 @@
+/*  TABLE OF CONTENTS                     */
+/*  1.0 root setup                        */
+/*  1.1 universal styles                  */
+/*  1.2 Home Page section styles          */
+/*  1.3 Showcase Page section styles      */
+/*  1.4 About Page section styles         */
+/*  1.5 Contact Page section styles       */
+/*  1.6 Responsive styles                 */
+
+
+/*  1.0 root setup                        */
+:root {
+  --background: rgb(160, 52, 126);
+  --background-alt: rgb(246, 143, 213);
+  --text-color: black;
+  --text-color-alt: white;
+  --primary-color: #4caf50;
+  --secondary-color: white;
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 64px;
+  --space-xl: 120px;
+}
+
+/*  1.1 universal styles                  */
+body {
+  background: var(--background);                          /* use the variable */
+  color: var(--text-color, black);                    /* Fallback incase the variable doens't exist */
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.grow:hover {
+  transform: scale(1.1);                                /* link grows slightly */
+}
+
+.section-styles {
+  padding: var(--space-lg) 0;
+}
+
+.section-styles-about {
+  padding: var(--space-lg) 0;
+}
+
+.heading-styles {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.paragraph-styles {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.bg-dark {
+  background-color: var(--background);
+  color: var(--text-color-alt);
+}
+
+.bg-lite {
+  background-color: var(--text-color-alt);
+}
+
+.flexible-img {
+  max-height: 100%;
+}
+
+.flexible-img-lg {
+  max-width: 350px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.img-container {
+    width: 20%;
+    margin: 0 auto; 
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container-alt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-container-section {
+   display: flex;          
+   align-items: center;    
+}
+
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* HEADER */
+#header {
+  padding: 0.5em;
+}
+
+/* Base navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none;                                    /* hidden on desktop */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #333;
+  border-radius: 2px;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+}
+
+.nav-links.active {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+  z-index: 1000;
+}
+
+/* FOOTER */
+#footer {
+  padding: 0.5em 0;
+}
+
+.border-top {
+  border-top: 1px solid var(--text-color);
+}
+
+/*  1.2 Home Page section styles          */
+
+/* Hero Section - Home Page */
+#hero-section {
+    background-image: url("images/stage.png");
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 400px;
+    width: 100%;
+    position: relative;
+}
+
+.hero-img-container{
+  position: absolute;
+  bottom: 0;                               /* aligns with section bottom */
+  left: 40%;                                 /* centers horizontally */
+  transform: translateX(-50%);
+  width: auto;                               /* let image size dictate */
+}
+
+
+.hero-voice-bubbles {
+  position: relative;                      /* parent must be relative */
+  width: 100%;
+  height: 400px;
+  animation: spin 2s linear infinite;      /* Animation for voice bubbles */
+
+}
+
+
+.absolute-img {
+  position: absolute;
+  transform: scale(0.4);                  /* Scales voice buble img to 40% orig. size */
+}
+
+.img-container {
+  width: 10%;
+  margin: 0 auto;
+  
+}
+
+.delayedone {
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 0.5s;
+  top: -200px; left: 40vw;
+  animation: animationOne 0.5s;
+}
+
+.delayedone:hover {
+  transform: rotate(20deg);                         /* -20deg goes counter clockwise */
+}
+
+.delayedtwo {
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 1s;
+  top: -60px; left: 50vw;
+  animation: animationTwo 1.5s;
+}
+
+.delayedtwo:hover {
+  transform: rotate(-20deg); 
+}
+
+.delayedthree {
+  animation: fadeIn 3s ease forwards;
+  animation-delay: 1.5s;
+  top: 50px; left: 40vw;
+  animation: animationThree 2s; 
+}
+
+.delayedthree:hover {
+  transform: rotate(20deg); 
+}
+
+@keyframes animationOne {
+    from {
+        transform: scale(0.3) rotate(0deg);   
+    }
+
+    to {
+        transform: scale(1.0) rotate(20deg);  
+    }
+}
+
+@keyframes animationTwo {
+    from {
+        transform: scale(0.3) rotate(0deg);     
+    }
+
+    to {
+        transform: scale(1.0) rotate(-20deg);  
+    }
+}
+
+@keyframes animationThree {
+    from {
+        transform: scale(0.3) rotate(0deg);     
+    }
+
+    to {
+        transform: scale(1.0) rotate(20deg); 
+    }
+}
+
+/* Second Section - Home Page */
+#second-section{
+  background-color: var(--background);
+  color: var( --text-color-alt);
+}
+
+/* Third Section - Home Page */
+#third-section{
+  background-color: var(--text-color-alt);
+}
+
+.w-50 {
+  width: 40%;
+}
+
+/*  1.3 Showcase Page section styles      */
+.heading-color {
+  color: var(--text-color-alt);
+}
+
+.mg-top {
+  margin-top: 4em;
+}
+
+/*  1.4 About Page section styles         */
+#table {
+  margin: 5em auto;
+  background-color: var(--text-color-alt);
+}
+
+table {
+  border: 3px solid black;
+    
+}
+
+td {
+  text-align: left;
+}
+
+caption {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+}
+
+.table-styles {
+  padding: var(--space-sm) var(--space-sm);
+  border-radius: 10px;
+    
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/*  1.5 Contact Page section styles       */
+form {
+  background-color: var(--text-color-alt);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+fieldset {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #999;
+  border-radius: 8px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+label {
+  display: block;                       /* puts a gap between content */
+  margin-top: 10px;
+}
+
+input, select, textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 5px;
+  box-sizing: border-box;               /* includes the padding, margin, border   */
+}
+
+.inline {
+  display: inline-block;
+  width: auto;
+}
+
+.buttons {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+textarea {
+  resize: none;
+}
+
+.align-left {
+  text-align: left;
+}
+
+/*  1.6 Responsive styles              */
+@media screen and (max-width: 1024px) {
+  .flex-container-section {
+   display: block;          
+   align-items: center;    
+  }
+
+  .w-50 {
+    width: 90%;
+  }
+
+  .flex-container-section {
+    display: block;          
+    align-items: center;    
+  }
+
+  .img-container {
+    width: 100%;                   /* let it span full width */
+  }
+
+  .hero-img-container{
+  height: 80%;
+}
+
+
+.absolute-img {
+  transform: scale(0.3);          /* scale and move voice bubles to fit smaller screen size*/ 
+}
+
+.delayedone {
+  top: -200px; left: 30vw;
+}
+
+.delayedtwo {
+  top: -60px; left: 40vw;
+}
+
+.delayedthree {
+  top: -10px; left: 30vw;
+}
+
+}
+
+@media screen and (max-width: 768px) {
+  #header {
+    display: flex;            
+    justify-content: flex-end;                /* shifts hamburger button to the right */
+  }
+
+  .hamburger {
+    display: flex;            /* show hamburger on mobile */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    width: 200px;
+    padding: 1em;
+    display: none;            /* hidden by default */
+  }
+
+  .nav-links.active {
+    display: flex;            /* show when toggled */
+  }
+
+  .nav-links a {
+    margin: 0.5em 0;
+  }
+
+  .iframe-mobile {
+    width: 448px;
+    height: 252px;
+  }
+
+  .hero-img-container{
+  height: 70%;
+  }
+
+
+.delayedone {
+  top: -200px; left: 20vw;        /* scale and move voice bubles to fit smaller screen size*/ 
+}
+
+.delayedtwo {
+  top: -60px; left: 30vw;
+}
+
+.delayedthree {
+  top: -10px; left: 20vw;
+}
+}
+
+@media screen and (max-width: 480px) {
+.heading-styles {
+  width: 80%;
+  margin: 0 auto;
+  }
+
+.flexible-img-lg {
+  max-width: 250px;
+  height: auto;
+  margin: 0 auto;
+  }
+
+.iframe-mobile {
+  width: 320px;
+  height: 180px;
+  }
+
+.hero-img-container{
+  height: 50%;
+  }
+
+.hero-img-container{
+  left: 30%;                      /* centers horizontally */
+  transform: translateX(-50%);
+}
+
+.absolute-img {
+  transform: scale(0.3); 
+}
+
+.delayedone {
+  top: -110px; left: -15vw;
+}
+
+.delayedtwo {
+  top: 40px; left: 0vw;
+}
+
+.delayedthree {
+  top: 80px; left: -10vw;
+}
+
+#table {
+  margin: 2em auto;
+}
+
+.section-styles-about {
+  padding: 0 0 var(--space-lg) 0;
+}
+}
+
+
+
