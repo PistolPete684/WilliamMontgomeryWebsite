@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> About </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/ico" href="images/favicon.ico">
+</head>
+<!--                    ########        ABOUT PAGE        #########                           -->
+<body>
+
+<!-- Header -->
+<header id="header">
+  <div class="flex-container">
+    <nav class="navbar">
+      
+      <!-- Hamburger button -->
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+
+      <!-- Nav Menu -->
+      <ul class="nav-links">
+        <!-- I used raisin bread images for links because William famously has a raisin bread addiction - this was mean to be an easy egg for the hardcore fans -->
+        <li class="grow"><a href="index.html"><img src="images/HOME-NAV.png" alt="Home Tab" height="50" width="200"></a></li>
+        <li class="grow"><a href="showcase.html"><img src="images/SHOWCASE-NAV.png" alt="Showcase Tab" height="50" width="200"></a></li>
+        <li class="grow"><a href="about.html"><img src="images/ABOUT-NAV.png" alt="About Tab" height="50" width="200"></a></li>
+        <li class="grow"><a href="contact.html"><img src="images/CONTACT-NAV.png" alt="Contact Tab" height="50" width="200"></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="section-styles-about">
+
+<div class="heading-styles heading-color">
+    <h2> Tale of the Tape </h2>
+    
+</div>
+
+    <!-- Table  -->
+    <table id="table" class="table-styles">
+
+        <thead>
+            
+            <tr>
+                <th colspan="2"> William Montgomery </th>
+            </tr>
+            
+            <tr>
+                <td colspan="2">
+                    <img src="images/in-bed.png"  width="300" height="400" alt="William Montgomery lying in bed.">
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="2"> Stats </th>
+            </tr>
+
+        </thead>
+        <!-- Listing the stats for william -->
+         <!-- this is meant to be a joke because comedians are the furthest thing from fighters 
+          but they love to talks smack any chance they get -->
+        <tr>
+            <td class="bold">
+                Born
+            </td>
+
+            <td>
+                Memphis, Tennessee
+            </td>
+        </tr>
+
+        <tr>
+            <td class="bold">
+                Nickname
+            </td>
+
+            <td>
+                The Vanilla Gorilla
+            </td>
+        </tr>
+
+        <tr>
+            <td class="bold">
+                Height
+            </td>
+
+            <td>
+                5' 11"
+            </td>
+        </tr>
+
+        <tr>
+            <td class="bold">
+                Weight
+            </td>
+
+            <td>
+                187 lbs
+                
+            </td>
+        </tr>
+
+
+        <tr>
+            <td class="bold">
+                Division
+            </td>
+
+            <td>
+                Welter Weight
+            </td>
+        </tr>
+
+        <tr>
+            <td class="bold">
+                Reach
+            </td>
+
+            <td>
+                173"
+            </td>
+        </tr>
+
+        <tr>
+            <td class="bold">
+                Fighting out of
+            </td>
+
+            <td>
+                Memphis, Tenesse
+            </td>
+        </tr>
+
+        <tr>
+            <td class="bold">
+                Trainer
+            </td>
+
+            <td>
+                Self Taught 
+            </td>
+        </tr>
+
+        <tr>
+            <th colspan="2"> Record </th>
+        </tr>
+
+        <tr>
+            <td class="bold">
+                Wins
+            </td>
+            <td>
+                117
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                By knockout
+            </td>
+
+            <td>
+                47
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                By submission
+            </td>
+
+            <td>
+                13
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                By decision
+            </td>
+
+            <td>
+                28
+            </td>
+        </tr>
+
+        <tr>
+            <td class="bold">
+                Loses
+            </td>
+
+            <td>
+                17
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                By knockout
+            </td>
+
+            <td>
+                3
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                By decision
+            </td>
+
+            <td>
+                11
+            </td>
+        </tr>
+
+        <tr>
+            <td class="bold">
+                Draws
+            </td>
+
+            <td>
+                0
+            </td>
+        </tr>
+
+        <tr>
+            <th colspan="2"> Other Information </th>
+        </tr>
+
+        <tr>
+            <td class="bold">
+                University
+            </td>
+
+            <td>
+                University of Tennessee
+            </td>
+        </tr>
+
+        <tr>
+            <td class="bold">
+                Dog
+            </td>
+
+            <td>
+                "Gator"
+            </td>
+        </tr>
+
+    </table>
+
+</div>
+
+ <!-- Footer -->
+<footer id="footer" class="bg-lite border-top">
+
+    <div> 
+        All rights reserved &copy; by William Montgomery.
+    </div>
+    
+</footer>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    
+  });
+</script>
+
+</body>
+</html>

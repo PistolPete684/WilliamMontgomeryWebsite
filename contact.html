@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Contact </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/ico" href="images/favicon.ico">
+</head>
+
+<!--                    ########        CONTACT PAGE        #########                           -->
+<body>
+
+<!-- Header -->
+<header id="header">
+  <div class="flex-container">
+    <nav class="navbar">
+      
+      <!-- Hamburger button -->
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+
+      <!-- Nav Menu -->
+      <ul class="nav-links">
+        <!-- I used raisin bread images for links because William famously has a raisin bread addiction - this was mean to be an easy egg for the hardcore fans -->
+        <li class="grow"><a href="index.html"><img src="images/HOME-NAV.png" alt="Home Tab" height="50" width="200"></a></li>
+        <li class="grow"><a href="showcase.html"><img src="images/SHOWCASE-NAV.png" alt="Showcase Tab" height="50" width="200"></a></li>
+        <li class="grow"><a href="about.html"><img src="images/ABOUT-NAV.png" alt="About Tab" height="50" width="200"></a></li>
+        <li class="grow"><a href="contact.html"><img src="images/CONTACT-NAV.png" alt="Contact Tab" height="50" width="200"></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<!-- Page heading -->
+<div class="section-styles"> 
+
+    <div class="heading-styles heading-color">
+      <h1> William Montgomery Comedy  </h1>
+      <h2> Fan Feedback Form </h2>
+      
+    </div>
+
+  <!-- FORM -->
+
+  <!-- Personal Info -->
+  <form method="post" action="https://httpbin.org/post" class="section-styles mg-top">
+
+    <fieldset>
+
+      <legend> Feedback Form </legend>
+
+      <label for="txtFirstName" class="align-left"> First Name: </label>
+
+      <input type="text" id="txtFirstName" name="txtFirstName" required placeholder="First name">
+
+      <label for="txtLastName" class="align-left"> Last Name: </label>
+
+      <input type="text" id="txtLastName" name="txtLastName" required placeholder="Last name">
+
+      <label for="txtEmail" class="align-left"> Email Address: </label>
+
+      <input type="email" id="txtEmail" name="txtEmail" required placeholder="name@email.com">
+
+
+      <label for="txtPhone" class="align-left"> Telephone: </label>
+      <input type="tel" id="txtPhone" name="txtPhone" placeholder="506-897-5555">
+
+    </fieldset>
+
+    <!-- Radio buttons -->
+    <fieldset>
+
+      <legend> Preferences </legend>
+      <p class="align-left"> Tell us if you enjoy William's humour: </p>
+      
+
+      <label>
+ 
+      <input type="radio" name="vote" value="phone" class="inline" checked>
+        Yes
+      </label>
+     
+      <input type="radio" name="vote" value="none" class="inline">
+        No
+      </label>
+
+    </fieldset>
+
+    <!-- Scroll bar -->
+    <fieldset>
+
+      <legend> Enjoyment Scale </legend>
+
+      <p class="align-left"> On a scale from 1 to 100, how much do you enjoy Williams humour: </p>
+      
+      <div class="flex-container-alt">
+       <label for="volume"> < 1  </label>
+       <label for="volume">  100 > </label>
+      </div>
+       <input type="range" id="volume" name="volume" min="0" max="100" value="70">
+
+    </fieldset>
+
+    <!-- check box-->
+    <fieldset>
+
+      <legend> Format </legend>
+      <p class="align-left"> Tell us if you prefer William's stand up comedy, his podcast or both: </p>
+      
+      <label>
+
+        <input type="checkbox" id="standup" name="standup" class="inline"> 
+        Stand Up
+      
+        <input type="checkbox" id="podcast" name="podcast" class="inline"> 
+        Podcast
+      
+       </label>
+
+    </fieldset>
+
+    <!-- Text Area-->
+    <fieldset>
+ 
+      <legend> Additional Comments </legend>
+      
+       <label class="align-left">
+
+        Tell us how you really feel about William Montgomery's comedy:
+
+        <textarea name="comments" rows="5" id="comments" placeholder="Enter any comments"> </textarea>
+
+       </label>
+
+    </fieldset>
+
+    <!-- Buttons -->
+    <div class="buttons"> 
+      <input type="submit" value="Submit" class="buttons"> 
+      <input type="reset" value="Reset Fields" class="buttons">
+    </div>
+
+  </form>
+
+  
+</div>
+
+<!-- Footer Section -->
+  <footer id="footer" class="bg-lite border-top">
+
+    <div> 
+      All rights reserved &copy; by William Montgomery.
+    </div>
+    
+</footer>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    
+  });
+</script>
+
+</body>
+</html>
